@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paciente 257 - RPG Solo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      color: #222;
+      margin: 0;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .section {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-radius: 8px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    input[type="text"], input[type="number"] {
+      width: 100%;
+      padding: 8px;
+      margin-top: 4px;
+      box-sizing: border-box;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 10px;
+    }
+    .checkboxes label {
+      display: flex;
+      align-items: center;
+    }
+    .checkboxes input {
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body><h1>PACIENTE 257</h1><div class="section">
+  <h2>Identidade</h2>
+  <label>Nome:
+    <input type="text">
+  </label>
+  <label>Código do Paciente: 257</label>
+  <label>Idade Estimada:
+    <input type="text">
+  </label>
+</div><div class="section">
+  <h2>Atributos</h2>
+  <div class="grid">
+    <label>Corpo:
+      <input type="number">
+    </label>
+    <label>Mente:
+      <input type="number">
+    </label>
+    <label>Instinto:
+      <input type="number">
+    </label>
+    <label>Frieza:
+      <input type="number">
+    </label>
+  </div>
+</div><div class="section">
+  <h2>Estabilidade Mental</h2>
+  <div class="checkboxes">
+    <label><input type="checkbox"> -1 no valor máximo de vida</label>
+    <label><input type="checkbox"> Reduz o dano causado em -1</label>
+    <label><input type="checkbox"> Aumenta o dano sofrido em +1</label>
+    <label><input type="checkbox"> Game Over – Mente destruída</label>
+  </div>
+</div><div class="section">
+  <h2>Inventário</h2>
+  <label>Materiais (máx. 6):
+    <input type="text" placeholder="Ex: Madeira, Pano..."> /6
+  </label>
+  <label>Itens Ativos (arma/uso):
+    <input type="text" placeholder="Item 1">
+    <input type="text" placeholder="Item 2">
+  </label>
+</div><div class="section">
+  <h2>Espólios</h2>
+  <input type="text" placeholder="Espólio 1">
+  <input type="text" placeholder="Espólio 2">
+  <input type="text" placeholder="Espólio 3">
+</div><div class="section">
+  <h2>Andares Visitados</h2>
+  <div class="checkboxes">
+    <label><input type="checkbox"> 2º Andar – Hospital</label>
+    <label><input type="checkbox"> 3º Andar – Obra Inacabada</label>
+    <label><input type="checkbox"> 1º Andar – Laboratório</label>
+  </div>
+</div><div class="section">
+  <h2>Objetivo Atual</h2>
+  <p><strong>ESCAPAR...</strong></p>
+</div></body>
+</html>
