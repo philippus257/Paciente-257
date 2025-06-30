@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pt-br">
+    <!DOCTYPE html><html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -42,6 +42,32 @@
     }
     .checkboxes input {
       margin-right: 8px;
+    }
+    .dice-terminal {
+      background-color: #111;
+      border: 1px solid #444;
+      color: #66ff66;
+      font-family: 'Courier New', monospace;
+      box-shadow: 0 0 15px #33ff33;
+      padding: 20px;
+      margin-top: 30px;
+      text-align: center;
+    }
+    .dice-terminal button {
+      background-color: #222;
+      border: 1px solid #66ff66;
+      color: #66ff66;
+      font-weight: bold;
+      padding: 10px 20px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    .dice-terminal select {
+      background-color: #000;
+      color: #66ff66;
+      border: 1px solid #66ff66;
+      padding: 5px;
+      margin: 10px;
     }
   </style>
 </head>
@@ -102,10 +128,9 @@
 </div><div class="section">
   <h2>Objetivo Atual</h2>
   <p><strong>ESCAPAR...</strong></p>
-</div>
-<div class="section">
-  <h2>🎲 Rolagem de Dados</h2>
-  <label for="dice">Escolha o dado:</label>
+</div><div class="section dice-terminal">
+  <h2>🎲 Terminal de Rolagem</h2>
+  <label for="dice">Selecione o dado:</label>
   <select id="dice">
     <option value="4">d4</option>
     <option value="6" selected>d6</option>
@@ -114,16 +139,15 @@
     <option value="12">d12</option>
     <option value="20">d20</option>
   </select>
-  <button onclick="rollDice()">Rolar</button>
-  <p id="result">Resultado: -</p>
-</div>
-
-<script>
+  <button onclick="rollDice()">🔘 ROLAR</button>
+  <p id="result">🧬 Resultado: -</p>
+</div><script>
   function rollDice() {
     const dice = document.getElementById("dice").value;
     const result = Math.floor(Math.random() * dice) + 1;
-    document.getElementById("result").textContent = "Resultado: " + result;
+    const resBox = document.getElementById("result");
+    resBox.textContent = "🧬 Resultado: " + result;
+    resBox.style.color = "#66ff66";
   }
-</script>
-</body>
-</html>
+</script></body>
+    </html>
