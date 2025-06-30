@@ -102,5 +102,28 @@
 </div><div class="section">
   <h2>Objetivo Atual</h2>
   <p><strong>ESCAPAR...</strong></p>
-</div></body>
+</div>
+<div class="section">
+  <h2>🎲 Rolagem de Dados</h2>
+  <label for="dice">Escolha o dado:</label>
+  <select id="dice">
+    <option value="4">d4</option>
+    <option value="6" selected>d6</option>
+    <option value="8">d8</option>
+    <option value="10">d10</option>
+    <option value="12">d12</option>
+    <option value="20">d20</option>
+  </select>
+  <button onclick="rollDice()">Rolar</button>
+  <p id="result">Resultado: -</p>
+</div>
+
+<script>
+  function rollDice() {
+    const dice = document.getElementById("dice").value;
+    const result = Math.floor(Math.random() * dice) + 1;
+    document.getElementById("result").textContent = "Resultado: " + result;
+  }
+</script>
+</body>
 </html>
